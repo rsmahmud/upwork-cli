@@ -7,17 +7,18 @@ from importlib import metadata
 
 def show_notification(title, msg):
     """Show toast notification."""
-    system = platform.system()
-    if system == "Darwin":  # macOS
-        subprocess.run(
-            ['osascript', '-e', f'display notification "{msg}" with title "{title}"'],
-            check=False,
-        )
-    elif system == "Linux":
-        subprocess.run(['notify-send', title, msg], check=False)
-    elif system == "Windows":
-        import ctypes
-        ctypes.windll.user32.MessageBoxW(0, msg, title, 0x1000)
+    pass
+    # system = platform.system()
+    # if system == "Darwin":  # macOS
+    #     subprocess.run(
+    #         ['osascript', '-e', f'display notification "{msg}" with title "{title}"'],
+    #         check=False,
+    #     )
+    # elif system == "Linux":
+    #     subprocess.run(['notify-send', title, msg], check=False)
+    # elif system == "Windows":
+    #     import ctypes
+    #     ctypes.windll.user32.MessageBoxW(0, msg, title, 0x1000)
 
 
 try:
