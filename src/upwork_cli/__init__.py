@@ -21,6 +21,6 @@ Whether you're an experienced freelancer or just starting out, this tool helps y
 informed, and efficient — all while remaining compliant with Upwork’s terms of service.
 """
 
-from utils import __version__
+from upwork_cli.utils import __version__
 
 __all__ = ['__version__']
